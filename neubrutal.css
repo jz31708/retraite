@@ -321,6 +321,10 @@ body{
   filter:grayscale(1) contrast(1.15);
 }
 
+.person.blue .person-media img{
+  object-position:center 32%;
+}
+
 .party-logos{
   display:grid;
   grid-template-columns:repeat(4,minmax(0,1fr));
