@@ -29,19 +29,22 @@ const PARTY_DATA = {
       ]
     },
     {
-      id: "pcf", name: "PCF", updated: "à consolider",
-      summary: "Ligne historique proche de LFI sur 60 ans, répartition, salaires et pensions. La doctrine 2027 doit encore être sourcée avec un texte national récent.",
+      id: "pcf", name: "PCF", updated: "août 2026",
+      summary: "60 ans à taux plein, pension à 75 % du revenu net d'activité et aucune pension sous le SMIC. Le financement repose sur les cotisations, l'emploi, les salaires et une cotisation sur les revenus financiers.",
       cells: {
-        small: ["forte", "yes", "Ligne historique très protectrice."],
-        high: ["faible", "no", "Pas de mécanisme récent vérifié ici visant les pensions élevées."],
-        workers: ["cotisations", "mixed", "Financement par emploi, salaires et cotisations dans les textes disponibles."],
-        age: ["60 ans", "no", "Position historique du parti."],
-        capitalTax: ["forte", "yes", "Contribution accrue du capital dans la doctrine du parti."],
-        capitalisation: ["non", "no", "Défense de la répartition."],
-        socialOwnership: ["oui, autre forme", "mixed", "Tradition de propriété publique, sans le mécanisme précis de fonds proposé ici."],
-        demography: ["à préciser", "unknown", "Programme national 2027 à consolider."]
+        small: ["très forte", "yes", "Le PCF fixe un objectif de pension à 75 % du revenu net d'activité et aucune pension sous le SMIC."],
+        high: ["faible", "no", "Les textes récents consultés renforcent les pensions et ne prévoient pas d'effort spécifique sur les pensions élevées."],
+        workers: ["cotisations", "no", "Le PCF veut financer le système par les cotisations sociales, avec emploi et salaires plus élevés."],
+        age: ["60 ans", "no", "Retraite à 60 ans à taux plein pour une carrière complète."],
+        capitalTax: ["revenus financiers", "yes", "Le PCF propose de soumettre les revenus financiers des entreprises et banques à cotisation."],
+        capitalisation: ["non", "no", "Le parti défend un système intégralement financé par la cotisation sociale."],
+        socialOwnership: ["investissement public", "mixed", "Le PCF défend un rôle public fort dans l'économie, mais pas le fonds social de retraite décrit ici."],
+        demography: ["réponse par l'emploi", "mixed", "Le parti répond au financement par l'emploi, les salaires, les cotisations et les revenus financiers plutôt que par une baisse des droits."]
       },
-      sources: [["Document PCF disponible", "https://23.pcf.fr/sites/default/files/argumentaire_retraite_0.pdf"]]
+      sources: [
+        ["Programme PCF, retraite à 60 ans", "https://www.pcf.fr/objectif_1"],
+        ["Pétition PCF et financement", "https://www.pcf.fr/petition_retraite"]
+      ]
     },
     {
       id: "eco", name: "Écologistes", updated: "juillet 2026",
@@ -59,19 +62,19 @@ const PARTY_DATA = {
       sources: [["Programme 2027 présenté en juillet 2026", "https://www.lemonde.fr/politique/article/2026/07/13/premiere-republique-ecologique-et-citoyenne-le-programme-des-ecologistes-pour-peser-en-2027_6723128_823448.html"]]
     },
     {
-      id: "ps", name: "PS", updated: "août 2026",
-      summary: "Doctrine 2027 encore mouvante. Défense de la répartition, opposition au recul à 64 ans, positions internes différentes sur l'effort des retraités aisés.",
+      id: "ps", name: "PS", updated: "avril 2026",
+      summary: "Le projet socialiste veut abroger la réforme Borne puis fonder le droit au départ sur 43 annuités, avec une durée réduite selon la pénibilité.",
       cells: {
-        small: ["forte", "yes", "Protection des petites pensions largement partagée."],
-        high: ["divisé", "mixed", "Des responsables acceptent une contribution, d'autres la contestent."],
-        workers: ["à préciser", "unknown", "Doctrine finale 2027 non stabilisée."],
-        age: ["< 64", "mixed", "Le parti a poussé la suspension de la réforme, doctrine finale à préciser."],
-        capitalTax: ["forte", "yes", "Fiscalité progressive du capital dans la tradition programmatique récente."],
-        capitalisation: ["fonds de réserve", "mixed", "Des responsables évoquent plutôt un fonds de réserve public qu'un compte individuel."],
-        socialOwnership: ["à préciser", "unknown", "Pas de doctrine nationale stabilisée sur la propriété sociale."],
-        demography: ["divisé", "mixed", "Le débat interne existe sur le partage de l'effort."]
+        small: ["forte", "yes", "Le projet défend un système par répartition et une retraite en bonne santé. Le détail des minima doit encore être chiffré."],
+        high: ["à préciser", "unknown", "Le projet d'avril 2026 ne fixe pas de règle spécifique d'effort pour les pensions élevées."],
+        workers: ["43 annuités", "mixed", "Le projet retient une durée de cotisation de 43 annuités, réduite selon la pénibilité."],
+        age: ["durée plutôt qu'âge", "mixed", "Après abrogation de la réforme Borne, le projet propose un droit calculé selon 43 annuités, avec réduction pour pénibilité."],
+        capitalTax: ["à préciser", "unknown", "Le volet retraite du projet ne permet pas à lui seul de fixer une note sur la fiscalité du capital."],
+        capitalisation: ["répartition", "no", "Le texte consulté propose de refonder le système par répartition."],
+        socialOwnership: ["non documentée", "unknown", "Le projet retraite ne décrit pas de fonds de propriété sociale."],
+        demography: ["réponse par la durée", "mixed", "Le projet abandonne le seul âge légal comme pivot et retient une durée de cotisation."]
       },
-      sources: [["Doctrine 2027 à consolider", "https://www.parti-socialiste.fr/"]]
+      sources: [["Projet socialiste, avril 2026", "https://ressources-militantes.parti-socialiste.fr/assets/pdf/PROJET_PS_V21avril-2.pdf"]]
     },
     {
       id: "pp", name: "Place publique", updated: "juin 2025",
