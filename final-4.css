@@ -24,6 +24,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;align-items:fle
 }
 @media (max-width:720px){
   .wrap{padding:0 16px}
+  .hero{overflow:hidden}
+  .hero .grid > *, .ownership > *, .chips > *, .owner-row > * { min-width:0 }
+  .owner-row span, .owner-row small { overflow-wrap:anywhere }
   .site-header .wrap{align-items:flex-start;padding-top:10px;padding-bottom:10px;min-height:0;flex-direction:column}
   nav{width:100%}
   nav a{flex:1 1 auto;text-align:center;font-size:10px;padding:10px 8px}
