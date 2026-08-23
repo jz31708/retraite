@@ -83,4 +83,4 @@ const PARTY_DATA = {
         small: ["forte", "yes", "Protection sociale revendiquée."],
         high: ["ouverte", "mixed", "Glucksmann a posé la question d'un rééquilibrage entre classes d'âge."],
         workers: ["rééquilibrer", "yes", "Le travail ne doit pas supporter seul la charge selon ses déclarations."],
-        age: ["différencié", "mixed", "Certains à 60 ans, d'autres plus tard. Refus de focaliser tout le débat sur un âge unique."]
+        age: ["différencié", "mixed", "Certains à 60 ans, d'autres plus tard. Refus de focaliser tout le débat sur un âge unique."],
