@@ -1,0 +1,55 @@
+.magnitude-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:0;border:3px solid var(--line)}
+.magnitude-grid .m-card{padding:20px;border-right:3px solid var(--line);background:#fff}
+.magnitude-grid .m-card:last-child{border-right:0;background:#fff3c9}
+.magnitude-grid .m-card:first-child{background:var(--ink);color:#fff}
+.m-card .tag{display:block;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;opacity:.75}
+.m-card strong{display:block;margin-top:10px;font-family:"Arial Narrow",Arial,sans-serif;font-size:74px;line-height:.9;letter-spacing:-.07em}
+.m-card p{margin:10px 0 0;font-size:15px;line-height:1.35}
+.compare-bars{margin-top:18px;padding:20px;border:3px solid var(--line);background:#fff}
+.compare-row{display:grid;grid-template-columns:210px 1fr 90px;gap:14px;align-items:center}
+.compare-row+.compare-row{margin-top:14px}
+.compare-row .track{height:24px;background:#eae4d8;border:2px solid var(--line)}
+.compare-row .fill{height:100%;background:var(--ink)}
+.compare-row.secondary .fill{background:var(--red)}
+.compare-row.tertiary .fill{background:var(--yellow)}
+.compare-row span,.compare-row strong{font-size:14px;font-weight:800}
+.truth{margin-top:18px;padding:20px;border-left:6px solid var(--red);background:#f5ece0}
+.truth strong{display:block;font-size:28px;font-family:"Arial Narrow",Arial,sans-serif;letter-spacing:-.03em;text-transform:uppercase;margin-bottom:8px}
+.truth p{margin:0;font-size:17px;line-height:1.42}
+.stock-flow{margin-top:24px;display:grid;grid-template-columns:.9fr 1.1fr;gap:24px}
+.stock-copy,.stock-boxes{padding:20px;border:3px solid var(--line)}
+.stock-copy{background:#fff}
+.stock-copy p{margin:0;font-size:17px;color:var(--muted)}
+.stock-boxes{display:grid;grid-template-columns:1fr 1fr;gap:0;background:#fff}
+.stock-box{padding:20px;border-right:3px solid var(--line)}
+.stock-box:last-child{border-right:0;background:#eef8cf}
+.stock-box:first-child{background:var(--ink);color:#fff}
+.stock-box .tag{display:block;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;opacity:.75}
+.stock-box strong{display:block;margin-top:28px;font-family:"Arial Narrow",Arial,sans-serif;font-size:64px;line-height:.9;letter-spacing:-.07em}
+.stock-box p{margin:12px 0 0;font-size:15px;line-height:1.35}
+.debt-top{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.debt-stat{padding:20px;border:3px solid var(--line)}
+.debt-stat.red{background:var(--red)}
+.debt-stat.paper{background:#fff}
+.debt-stat .tag{display:block;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+.debt-stat strong{display:block;margin-top:10px;font-family:"Arial Narrow",Arial,sans-serif;font-size:86px;line-height:.88;letter-spacing:-.07em}
+.debt-stat p{margin:10px 0 0;font-size:16px;line-height:1.38;max-width:40ch}
+.debt-compare{margin-top:18px;padding:20px;border:3px solid var(--line);background:#fff}
+.debt-compare-row{display:grid;grid-template-columns:220px 1fr 96px;gap:14px;align-items:center}
+.debt-compare-row+.debt-compare-row{margin-top:12px}
+.debt-compare-row .track{height:26px;background:#ebe5d9;border:2px solid var(--line)}
+.debt-compare-row .fill{height:100%;background:var(--red)}
+.debt-compare-row.school .fill{background:var(--blue)}
+.debt-compare-row span,.debt-compare-row strong{font-size:14px;font-weight:800}
+.debt-bottom{display:grid;grid-template-columns:1.08fr .92fr;gap:24px;margin-top:18px}
+.chart-card,.debt-copy{padding:20px;border:3px solid var(--line)}
+.chart-card{background:#fff}.debt-copy{background:#f6efe3}
+.chart-card p,.debt-copy p{margin:0;font-size:17px;line-height:1.44;color:var(--muted)}
+.debt-chart{margin-top:18px;display:grid;grid-template-columns:repeat(5,1fr);gap:12px;align-items:end;min-height:260px;border-left:2px solid var(--line);border-bottom:2px solid var(--line);padding:16px 8px 12px}
+.debt-bar{position:relative;background:var(--red);display:block;width:100%;align-self:end;min-height:8px}
+.debt-bar.projected{background:repeating-linear-gradient(45deg,var(--blue),var(--blue) 10px,#e7ecff 10px,#e7ecff 20px)}
+.debt-bar b{position:absolute;top:-22px;left:50%;transform:translateX(-50%);font-size:13px;font-weight:900}
+.debt-bar span{position:absolute;bottom:-28px;left:50%;transform:translateX(-50%);font-size:11px;font-weight:700}
+.callout{padding:16px 18px;background:#fff;border-left:6px solid var(--red);margin:18px 0}
+.callout strong{display:block;margin-bottom:6px;font-size:18px}
+.callout p{margin:0;font-size:15px;color:var(--muted)}
