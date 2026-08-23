@@ -29,12 +29,20 @@
 
 const QUOTES = [
   {
-    person: "Manuel Bompard", party: "LFI", date: "22 janvier 2025",
-    quote: "Je trouve ça scandaleux d'un point de vue démocratique.",
-    context: "Interrogé sur une contribution accrue de retraités autour de 2 000 à 2 500 euros.",
-    bernard: "La phrase vise un autre seuil. La doctrine exprimée refuse cependant de faire du statut de retraité un critère spécifique d'effort.",
-    verdict: "Tend à protéger Bernard contre un prélèvement ciblé sur sa pension.",
-    url: "https://www.dailymotion.com/video/x9cssi4"
+    person: "Manuel Bompard", party: "LFI", date: "18 août 2026",
+    quote: "Je ne suis pas d'accord avec le fait que le gouvernement cible uniquement la catégorie des retraités.",
+    context: "Interrogé sur l'idée de faire davantage contribuer les retraités aisés.",
+    bernard: "La position ne sanctuarise pas Bernard contre l'impôt général. Elle refuse de lui demander un effort supplémentaire parce qu'il est retraité.",
+    verdict: "Une sous-indexation ciblée de la pension de Bernard est rejetée par ce raisonnement.",
+    url: "https://www.replay.fr/face-a-face-manuel-bompard-je-suis-pour-que-les-francais-les-plus-aises-contribue-6742867"
+  },
+  {
+    person: "Aurélien Taché", party: "LFI", date: "21 août 2026",
+    quote: "Ces retraités qui doivent continuer à aider leurs enfants et leurs petits-enfants, il faut les laisser tranquilles.",
+    context: "Réaction au débat sur le gel ou la sous-indexation de pensions.",
+    bernard: "Le propos ne fixe pas de plafond de pension. Pris au pied de la lettre, il protège aussi des retraités aisés qui aident leur famille.",
+    verdict: "La logique tend à protéger Bernard d'un effort ciblé sur sa pension.",
+    url: "https://x.com/BFMTV/status/2090898858297467099"
   },
   {
     person: "Jean-Philippe Tanguy", party: "RN", date: "11 août 2026",
