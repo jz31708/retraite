@@ -11,18 +11,21 @@ document.getElementById('main').insertAdjacentHTML('beforeend', String.raw`
   </div>
   <div class="hero-numbers reveal" aria-label="Trois chiffres clés">
     <article>
+      <a class="source-badge" href="https://www.cor-retraites.fr/sites/default/files/2026-06/RA_2026_def.pdf" target="_blank" rel="noreferrer" aria-label="Source COR pour les dépenses de retraite" title="Source : COR 2026">↗</a>
       <span class="big-number">422,2</span>
       <span class="unit">Md€ par an</span>
       <p>de dépenses brutes de retraite en 2025.</p>
       <a class="source-link" href="https://www.cor-retraites.fr/sites/default/files/2026-06/RA_2026_def.pdf" target="_blank" rel="noreferrer">COR 2026</a>
     </article>
     <article>
+      <a class="source-badge" href="https://www.insee.fr/fr/statistiques/2415121" target="_blank" rel="noreferrer" aria-label="Source Insee pour le ratio cotisants retraités" title="Source : Insee">↗</a>
       <span class="big-number">1,77</span>
       <span class="unit">cotisant</span>
       <p>par retraité, tous régimes, en 2023.</p>
       <a class="source-link" href="https://www.insee.fr/fr/statistiques/2415121" target="_blank" rel="noreferrer">Insee</a>
     </article>
     <article>
+      <a class="source-badge" href="https://www.insee.fr/fr/statistiques/8719824" target="_blank" rel="noreferrer" aria-label="Source Insee pour la population de 65 ans ou plus" title="Source : Insee">↗</a>
       <span class="big-number">22,2 %</span>
       <span class="unit">65 ans ou plus</span>
       <p>dans la population française au 1er janvier 2026.</p>
@@ -40,12 +43,14 @@ document.getElementById('main').insertAdjacentHTML('beforeend', String.raw`
 
   <div class="age-compare reveal">
     <article class="age-panel">
+      <a class="source-badge" href="https://www.populationpyramid.net/fr/france/1950/" target="_blank" rel="noreferrer" aria-label="Source ONU via PopulationPyramid.net pour 1950" title="Source : ONU, WPP 2024">↗</a>
       <div class="age-panel-head"><strong>1950</strong><span>profil par âge, total hommes + femmes</span></div>
       <div class="age-shape" id="ageShape1950" role="img" aria-label="Profil de population de la France par âge en 1950"></div>
       <p class="age-caption">Une base jeune, peu de très vieux.</p>
     </article>
     <div class="age-middle" aria-hidden="true"><span>76 ans</span><i></i></div>
     <article class="age-panel">
+      <a class="source-badge light" href="https://www.insee.fr/fr/statistiques/8581713?geo=FE-1&sommaire=8581745" target="_blank" rel="noreferrer" aria-label="Source Insee pour le profil 2022" title="Source : Insee">↗</a>
       <div class="age-panel-head"><strong>2022</strong><span>profil par âge, données Insee</span></div>
       <div class="age-shape" id="ageShapeNow" role="img" aria-label="Profil récent de population de la France par âge"></div>
       <p class="age-caption">Les générations nombreuses ont remonté la pyramide.</p>
@@ -53,6 +58,7 @@ document.getElementById('main').insertAdjacentHTML('beforeend', String.raw`
   </div>
 
   <div class="history-strip reveal" aria-label="Repères Insee 1946 et 2026">
+    <a class="source-badge" href="https://www.insee.fr/fr/statistiques/6037741" target="_blank" rel="noreferrer" aria-label="Source Insee pour les repères historiques" title="Source : Insee">↗</a>
     <div>
       <span class="history-year">1946</span>
       <strong>29,5 %</strong><small>moins de 20 ans</small>
@@ -70,6 +76,7 @@ document.getElementById('main').insertAdjacentHTML('beforeend', String.raw`
   <p class="history-source reveal">Profil 1950 : World Population Prospects de l'ONU via PopulationPyramid.net. Profil 2022 et repères 1946/2026 : Insee. <a class="source-link" href="https://www.populationpyramid.net/fr/france/1950/" target="_blank" rel="noreferrer">1950</a> <a class="source-link" href="https://www.insee.fr/fr/statistiques/8581713?geo=FE-1&sommaire=8581745" target="_blank" rel="noreferrer">2022</a> <a class="source-link" href="https://www.insee.fr/fr/statistiques/6037741" target="_blank" rel="noreferrer">1946</a> <a class="source-link" href="https://www.insee.fr/fr/statistiques/8719824" target="_blank" rel="noreferrer">2026</a></p>
 
   <div class="ratio-block reveal">
+    <a class="source-badge" href="https://www.insee.fr/fr/statistiques/3676670" target="_blank" rel="noreferrer" aria-label="Source CNAV et Insee pour le ratio cotisants retraités" title="Source : CNAV et Insee">↗</a>
     <div class="ratio-copy">
       <p class="eyebrow">Régime général</p>
       <h3>3,14 cotisants par retraité en 1975. 1,31 en 2016.</h3>
@@ -128,9 +135,9 @@ document.getElementById('main').insertAdjacentHTML('beforeend', String.raw`
   </div>
 
   <div class="magnitude-callout reveal">
-    <div><span>Échelle du système</span><strong>422,2 Md€</strong><small>dépenses brutes de retraite en 2025</small></div>
-    <div><span>Recettes fiscales LFI</span><strong>+48 Md€</strong><small>hauts revenus + patrimoines, selon son chiffrage</small></div>
-    <div><span>Mesures retraite LFI</span><strong>+26,8 Md€</strong><small>quatre grandes lignes chiffrées dans son budget 2026</small></div>
+    <div><a class="source-badge light" href="https://www.cor-retraites.fr/sites/default/files/2026-06/RA_2026_def.pdf" target="_blank" rel="noreferrer" aria-label="Source COR pour les dépenses de retraite" title="Source : COR 2026">↗</a><span>Échelle du système</span><strong>422,2 Md€</strong><small>dépenses brutes de retraite en 2025</small></div>
+    <div><a class="source-badge" href="https://programme.lafranceinsoumise.fr/wp-content/uploads/2024/02/Plan_UP_JUSTICE-FISCALE_web-3-1.pdf" target="_blank" rel="noreferrer" aria-label="Source LFI pour le chiffrage fiscal" title="Source : plan fiscal LFI">↗</a><span>Recettes fiscales LFI</span><strong>+48 Md€</strong><small>hauts revenus + patrimoines, selon son chiffrage</small></div>
+    <div><a class="source-badge" href="https://lafranceinsoumise.fr/wp-content/uploads/2025/10/Budget-2026_LFI_web_pages.pdf" target="_blank" rel="noreferrer" aria-label="Source LFI pour les mesures retraite" title="Source : budget LFI 2026">↗</a><span>Mesures retraite LFI</span><strong>+26,8 Md€</strong><small>quatre grandes lignes chiffrées dans son budget 2026</small></div>
   </div>
   <div class="magnitude-bars reveal" id="magnitudeBars" aria-label="Ordres de grandeur budgétaires"></div>
   <div class="truth-box reveal">
@@ -140,6 +147,7 @@ document.getElementById('main').insertAdjacentHTML('beforeend', String.raw`
   </div>
 
   <div class="stock-lab reveal">
+    <a class="source-badge" href="https://www.cor-retraites.fr/sites/default/files/2026-06/RA_2026_def.pdf" target="_blank" rel="noreferrer" aria-label="Source COR pour la dépense annuelle de retraite utilisée dans le calcul" title="Source du dénominateur : COR 2026">↗</a>
     <div class="stock-copy">
       <p class="eyebrow">Stock contre flux</p>
       <h3>Choisis une fortune. Puis regarde ce qu'il se passe si on la dépense.</h3>

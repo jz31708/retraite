@@ -1,0 +1,1 @@
+(async()=>{const host=document.getElementById("main");for(const file of ["section-1.html","section-2.html","section-3.html","section-4.html"]){const r=await fetch(file);if(!r.ok)throw new Error(`Failed to load ${file}`);host.insertAdjacentHTML("beforeend",await r.text());}})();

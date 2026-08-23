@@ -1,14 +1,52 @@
 document.getElementById('main').insertAdjacentHTML('beforeend', String.raw`
 <section class="section-pad debt" id="dette">
-  <div class="debt-number reveal">
-    <span>64,7 Md€</span>
-    <p>d'intérêts payés en 2025 par l'ensemble des administrations publiques.</p>
-    <a class="source-link light" href="https://www.insee.fr/fr/statistiques/2381404" target="_blank" rel="noreferrer">Insee</a>
+  <div class="debt-intro reveal">
+    <p class="eyebrow">Le vrai coût de la dette</p>
+    <h2>La dette n'est pas le problème en soi. Les intérêts peuvent le devenir.</h2>
+    <p>Emprunter pour traverser une crise ou investir peut avoir du sens. Le coût apparaît quand une part croissante du budget sert chaque année à payer les intérêts du stock accumulé.</p>
   </div>
+
+  <div class="debt-compare reveal" aria-label="Comparaison entre intérêts publics et budget de l'enseignement scolaire">
+    <article class="debt-card interest-card">
+      <a class="source-badge light" href="https://www.insee.fr/fr/statistiques/2381404" target="_blank" rel="noreferrer" aria-label="Source Insee pour les intérêts publics" title="Source : Insee">↗</a>
+      <span class="debt-kicker">Intérêts publics, 2025</span>
+      <strong>64,7 Md€</strong>
+      <p>payés par l'ensemble des administrations publiques.</p>
+    </article>
+    <div class="debt-versus" aria-hidden="true"><span>≈</span></div>
+    <article class="debt-card school-card">
+      <a class="source-badge" href="https://www.budget.gouv.fr/documentation/file-download/30562" target="_blank" rel="noreferrer" aria-label="Source budget de l'État pour l'enseignement scolaire" title="Source : budget de l'État">↗</a>
+      <span class="debt-kicker">Enseignement scolaire, 2026</span>
+      <strong>64,5 Md€</strong>
+      <p>de crédits budgétaires, hors contribution directe au CAS Pensions.</p>
+    </article>
+  </div>
+  <p class="debt-compare-note reveal">Deux années et deux périmètres différents. La comparaison donne un ordre de grandeur, pas une équivalence comptable. La Cour des comptes fait elle-même ce rapprochement.</p>
+
+  <div class="debt-trend reveal">
+    <div class="debt-trend-head">
+      <div>
+        <span class="debt-kicker">La facture monte</span>
+        <h3>51 Md€ en 2023. Plus de 100 Md€ possibles en 2029.</h3>
+      </div>
+      <a class="source-badge light" href="https://www.ccomptes.fr/fr/publications/la-situation-des-finances-publiques-debut-2026" target="_blank" rel="noreferrer" aria-label="Source Cour des comptes pour les projections d'intérêts" title="Source : Cour des comptes">↗</a>
+    </div>
+    <div class="debt-bars" role="img" aria-label="Charge d'intérêts des administrations publiques : 51 milliards en 2023, 58,1 en 2024, 64,7 en 2025, près de 74 projetés en 2026 et plus de 100 projetés en 2029">
+      <div class="debt-bar observed"><i style="height:46%"></i><b>51,0</b><span>2023</span><small>observé</small></div>
+      <div class="debt-bar observed"><i style="height:53%"></i><b>58,1</b><span>2024</span><small>observé</small></div>
+      <div class="debt-bar observed"><i style="height:59%"></i><b>64,7</b><span>2025</span><small>observé</small></div>
+      <div class="debt-bar projected"><i style="height:67%"></i><b>≈74</b><span>2026</span><small>projection</small></div>
+      <div class="debt-bar projected"><i style="height:94%"></i><b>&gt;100</b><span>2029</span><small>projection</small></div>
+    </div>
+    <div class="debt-chart-sources">
+      <a class="source-link light" href="https://www.insee.fr/fr/statistiques/documentation/annexe_ir_prov_apu--20260326.pdf" target="_blank" rel="noreferrer">Insee 2023 à 2025</a>
+      <a class="source-link light" href="https://www.ccomptes.fr/fr/publications/la-situation-des-finances-publiques-debut-2026" target="_blank" rel="noreferrer">Cour des comptes 2026 et 2029</a>
+    </div>
+  </div>
+
   <div class="debt-copy reveal">
-    <p class="eyebrow">Ce qu'on transmet</p>
-    <h2>Une dette laisse une obligation. Un investissement peut laisser un actif.</h2>
-    <p>La santé, le chômage, l'éducation et les minima sociaux ne sont pas des dépenses inutiles parce qu'elles sont courantes. Le problème est plus précis. S'endetter durablement pour la consommation présente sans construire d'actif en face laisse la facture au futur sans le patrimoine.</p>
+    <h3>Le stock n'est pas une facture annuelle. Les intérêts, si.</h3>
+    <p>Plus la dette doit être refinancée à des taux élevés, plus son coût courant monte. Cet argent ne disparaît pas dans le vide, il rémunère les créanciers. Mais il n'est plus disponible pour l'école, la santé, l'investissement ou la construction de notre fonds collectif.</p>
     <details><summary>Et si on annulait une partie de la dette ?</summary><p>Une annulation envers des créanciers privés est un défaut ou une restructuration. Pour la dette détenue par l'Eurosystème, une perpétualisation à taux très faible est une piste politique radicale. Elle demanderait de changer le cadre européen actuel et ne crée pas un coffre de cash égal au nominal annulé.</p><div class="link-row"><a class="source-link light" href="https://eur-lex.europa.eu/eli/treaty/tfeu_2016/art_123/oj/eng" target="_blank" rel="noreferrer">Article 123 TFUE</a><a class="source-link light" href="https://www.ecb.europa.eu/pub/pdf/scpops/ecb.op273~fae24ce432.en.pdf" target="_blank" rel="noreferrer">BCE</a></div></details>
   </div>
 </section>
