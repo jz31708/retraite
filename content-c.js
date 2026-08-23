@@ -41,7 +41,7 @@ document.getElementById('main').insertAdjacentHTML('beforeend', String.raw`
 <details>
 <summary>Pourquoi l'État verse-t-il 82,28 % pour ses fonctionnaires civils ?</summary>
 <p>Depuis le 1er janvier 2026, le taux employeur de l'État pour les pensions civiles est de 82,28 % du traitement indiciaire concerné. Le salarié verse 11,10 %. Le 82,28 % est un taux d'équilibre. Il sert à couvrir les charges du régime.</p>
-<p>Ce taux ne se compare pas directement au privé. L'assiette, les primes et les règles de pension diffèrent. Le point utile est plus simple. Une part importante du financement public arrive par le budget employeur et entre ensuite comme recette du régime.</p>
+<p>Ce taux ne se compare pas directement au privé. L'assiette, les primes et les règles de pension diffèrent. Une partie du financement public passe par le budget de l'État employeur, puis apparaît comme recette du régime.</p>
 <div class="link-row">
 <a class="source-link" href="https://retraitesdeletat.gouv.fr/professionnels/le-versement-des-cotisations/les-etablissements-publics-nationaux-ou-organismes" rel="noreferrer" target="_blank">Service des retraites de l'État</a>
 <a class="source-link" href="https://www.legifrance.gouv.fr/eli/decret/2025/12/26/2025-1341/jo/texte" rel="noreferrer" target="_blank">Décret 2025-1341</a>
@@ -50,7 +50,7 @@ document.getElementById('main').insertAdjacentHTML('beforeend', String.raw`
 <details>
 <summary>Alors, le déficit COR est faux ?</summary>
 <p>Non. Il répond à une question comptable précise avec les ressources prévues par les règles actuelles. Un rapport du Sénat propose un autre retraitement et obtient un besoin de financement bien plus élevé. Ce n'est pas le même périmètre.</p>
-<p>Le site affiche les deux lectures quand elles servent le débat. Il n'appelle pas l'une d'elles le "vrai déficit".</p>
+<p>On affiche les deux chiffres avec leur méthode. Aucun n'est rebaptisé "vrai déficit".</p>
 <a class="source-link" href="https://www.senat.fr/rap/a25-126/a25-126_mono.html" rel="noreferrer" target="_blank">Avis du Sénat sur le PLFSS 2026</a>
 </details>
 <details>
@@ -62,7 +62,7 @@ document.getElementById('main').insertAdjacentHTML('beforeend', String.raw`
 <section class="section-pad sources" id="sources">
 <div class="section-heading reveal">
 <p class="eyebrow">Sources</p>
-<h2>Les chiffres importants doivent pouvoir être vérifiés en deux clics.</h2>
+<h2>Chaque gros chiffre doit pouvoir être vérifié en deux clics.</h2>
 </div>
 <div class="source-grid reveal" id="sourceGrid"></div>
 <details class="source-method reveal">
