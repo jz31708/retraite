@@ -60,19 +60,23 @@
       sources: [["Édouard Philippe, juillet 2026", "https://www.lemonde.fr/politique/article/2026/07/05/comment-edouard-philippe-essaie-de-faire-oublier-la-retraite-a-67-ans-pour-tous_6720821_823448.html"]]
     },
     {
-      id: "lr", name: "LR", updated: "à consolider",
-      summary: "La droite défend en général un travail plus long et ouvre la porte à la capitalisation. Elle a aussi protégé l'indexation de pensions existantes à plusieurs reprises.",
+      id: "lr", name: "LR", updated: "mai 2026",
+      summary: "Bruno Retailleau assume qu'il faut travailler davantage et veut ajouter un étage de capitalisation avec un fonds souverain. Sa ligne fait porter l'essentiel de l'ajustement sur le travail futur, pas sur les pensions élevées déjà versées.",
       cells: {
-        small: ["à préciser", "unknown", "Programme national 2027 à consolider."],
-        high: ["faible effort actuel", "no", "La ligne récente pèse davantage sur les futurs retraités via âge et durée."],
-        workers: ["travail plus long", "no", "Âge et durée restent des leviers majeurs."],
-        age: ["65 ans évoqués", "no", "Plusieurs responsables défendent un recul supplémentaire."],
-        capitalTax: ["faible", "no", "Fiscalité du capital moins centrale."],
-        capitalisation: ["ouverte", "yes", "La droite sénatoriale a déjà soutenu l'introduction d'une part de capitalisation."],
-        socialOwnership: ["non", "no", "Pas de fonds de propriété sociale dans la doctrine connue."],
-        demography: ["oui", "yes", "Le diagnostic démographique est explicite chez plusieurs responsables."]
+        small: ["à préciser", "unknown", "Les sources retenues ne fixent pas encore le traitement précis des petites pensions."],
+        high: ["faible effort actuel", "no", "La ligne publiée vise surtout le travail futur et la capitalisation, pas une baisse ciblée des pensions élevées actuelles."],
+        workers: ["travail plus long", "no", "Retailleau affirme qu'on ne peut pas vivre mieux en travaillant moins et refuse la suspension de la réforme."],
+        age: ["plus tard", "no", "Le parti défend le maintien de la réforme et un effort accru par le travail. Le chiffre exact du programme 2027 reste à préciser."],
+        capitalTax: ["faible", "no", "La fiscalité du capital n'est pas le levier central de la ligne économique publiée."],
+        capitalisation: ["oui", "yes", "Retailleau annonce un étage de capitalisation."],
+        socialOwnership: ["fonds souverain", "mixed", "Retailleau annonce un fonds souverain, sans mécanisme de propriété sociale inaliénable comparable au projet présenté ici."],
+        demography: ["oui", "yes", "La ligne LR présente le financement social et la dette comme des contraintes structurelles à traiter."]
       },
-      sources: [["Débat au Sénat sur capitalisation", "https://www.senat.fr/seances/s202404/s20240410/s20240410.pdf"]]
+      sources: [
+        ["Retailleau, fonds souverain et capitalisation", "https://republicains.fr/actualites/2025/08/28/bruno-retailleau-la-france-nest-pas-condamnee-au-chaos/"],
+        ["Retailleau, priorité au travail", "https://republicains.fr/actualites/2026/05/02/priorite-travail-france-35h-salaires-retraites/"],
+        ["LR, suspension de la réforme", "https://republicains.fr/actualites/2025/11/24/bruno-retailleau-ce-budget-cest-le-hold-up-du-siecle/"]
+      ]
     },
     {
       id: "rn", name: "RN", updated: "août 2026",
