@@ -1,0 +1,375 @@
+:root{
+  --ink:#14120f;
+  --paper:#fff7ef;
+  --paper-2:#ffe8d3;
+  --card:#fffdf8;
+  --red:#ff7200;
+  --acid:#ffd84d;
+  --blue:#ffb36e;
+  --yellow:#ffe28a;
+  --pink:#ffc08b;
+  --muted:#5c5046;
+  --line:#14120f;
+}
+
+body{
+  background:var(--paper);
+  color:var(--ink);
+}
+
+/* One palette, one visual language. */
+.site-header{
+  background:rgba(255,247,239,.98);
+  backdrop-filter:none;
+  border-bottom:4px solid var(--line);
+  box-shadow:0 7px 0 var(--line);
+}
+
+.brand::before{
+  background:var(--red);
+  border:3px solid var(--line);
+  box-shadow:4px 4px 0 var(--line);
+}
+
+.site-header nav{
+  gap:7px;
+}
+
+.site-header nav a{
+  margin-left:0;
+  padding:10px 13px;
+  border:3px solid var(--line);
+  background:#fff;
+  color:var(--ink);
+  box-shadow:4px 4px 0 var(--line);
+}
+
+.site-header nav a:nth-child(even){
+  background:var(--paper-2);
+  color:var(--ink);
+}
+
+.site-header nav a:nth-child(odd){
+  background:#fff;
+  color:var(--ink);
+}
+
+.site-header nav a:hover,
+.site-header nav a:focus-visible{
+  background:var(--red);
+  color:#fff;
+  transform:translate(-2px,-2px);
+  box-shadow:6px 6px 0 var(--line);
+}
+
+.section{
+  border-top:4px solid var(--line);
+}
+
+.hero{
+  background:var(--paper);
+  color:var(--ink);
+}
+
+.hero .lead{
+  color:var(--ink);
+}
+
+.kicker{
+  background:var(--red) !important;
+  color:#fff !important;
+  border:3px solid var(--line);
+  box-shadow:5px 5px 0 var(--line);
+}
+
+.btn{
+  border:3px solid var(--line);
+  box-shadow:5px 5px 0 var(--line);
+  transition:transform .12s ease,box-shadow .12s ease;
+}
+
+.btn:hover,
+.btn:focus-visible{
+  transform:translate(-2px,-2px);
+  box-shadow:7px 7px 0 var(--line);
+}
+
+.btn.primary{
+  background:var(--red);
+  border-color:var(--line);
+  color:#fff;
+}
+
+.btn.secondary{
+  background:#fff;
+  color:var(--ink);
+}
+
+.stat-stack{
+  border:4px solid var(--line);
+  background:#fff;
+  box-shadow:10px 10px 0 var(--line);
+}
+
+.stat-card{
+  border-bottom:4px solid var(--line);
+}
+
+.stat-card.red{background:var(--red);}
+.stat-card.acid{background:var(--acid);}
+.stat-card.white{background:#fff;}
+
+.source{
+  padding:6px 10px;
+  border:3px solid currentColor;
+  background:#fff;
+  color:var(--ink);
+  box-shadow:4px 4px 0 var(--line);
+  transition:transform .12s ease,box-shadow .12s ease;
+}
+
+.source:hover,
+.source:focus-visible{
+  background:var(--red);
+  color:#fff;
+  transform:translate(-2px,-2px);
+  box-shadow:6px 6px 0 var(--line);
+}
+
+/* Hard frames and hard shadows are the main neubrutalist device. */
+.panel,
+.ratio-copy,
+.bar-chart,
+.person,
+.adjust,
+.magnitude-grid,
+.compare-bars,
+.stock-copy,
+.stock-boxes,
+.debt-stat,
+.debt-compare,
+.chart-card,
+.debt-copy,
+.flow-row,
+.guard,
+.ownership .text,
+.ownership .viz,
+.fund,
+.party-q,
+.party-table-wrap,
+.quote,
+.faq-list details,
+.deep details,
+.source-card{
+  border-width:4px;
+  border-color:var(--line);
+  box-shadow:8px 8px 0 var(--line);
+}
+
+.panel,
+.ratio-copy,
+.bar-chart,
+.adjust,
+.compare-bars,
+.stock-copy,
+.stock-boxes,
+.chart-card,
+.ownership .text,
+.ownership .viz,
+.fund,
+.party-table-wrap,
+.faq-list details,
+.deep details{
+  background:#fff;
+}
+
+/* Kill the rainbow. Warm orange/cream variants only. */
+.person.green,
+.guard:nth-child(3),
+.pchip.you,
+.quote:nth-child(3),
+.deep details:nth-child(3){
+  background:#fff3b9;
+}
+
+.person.red,
+.debt-stat.red,
+.quote:nth-child(2),
+.guard:nth-child(2),
+.pchip.no{
+  background:#ffb27a;
+}
+
+.person.blue,
+.quote:nth-child(4),
+.guard:nth-child(4),
+.pchip.mixed,
+.deep details:nth-child(2),
+.magnitude-grid .m-card:last-child{
+  background:#ffd7b3;
+}
+
+.pchip.yes,
+.magnitude-grid .m-card:nth-child(2),
+.debt-stat.paper{
+  background:#fff;
+}
+
+.pyramid-middle,
+.triptych .middle{
+  background:var(--red);
+  color:#fff;
+  border-color:var(--line);
+}
+
+.age-bar.red,
+.bar.red,
+.compare-row.secondary .fill,
+.debt-compare-row .fill,
+.debt-bar{
+  background:var(--red);
+}
+
+.age-bar.acid,
+.triptych .box.light,
+.chip.active,
+.owner-bar b{
+  background:var(--acid);
+}
+
+.debt-compare-row.school .fill,
+.compare-row.tertiary .fill{
+  background:#ffb36e;
+}
+
+.magnitude-grid .m-card:first-child,
+.stock-box:first-child,
+.party-q .left,
+.answer,
+.node.dark{
+  background:var(--ink);
+  color:#fff;
+}
+
+.node.green{
+  background:var(--red);
+  color:#fff;
+}
+
+.owner.social{
+  background:var(--acid);
+}
+
+.flow-row.red{
+  background:#ffd8ba;
+}
+
+.flow-row.green{
+  background:#fff3b9;
+}
+
+.truth{
+  border:4px solid var(--line);
+  border-left:4px solid var(--line);
+  background:#fff0e1;
+  box-shadow:8px 8px 0 var(--line);
+}
+
+.callout{
+  background:#fff;
+  border-left:7px solid var(--red);
+}
+
+/* Sources are light, not a separate dark-themed universe. */
+.dark-section{
+  background:var(--paper-2);
+  color:var(--ink);
+}
+
+.dark-section .intro p{
+  color:var(--muted);
+}
+
+.source-card{
+  background:#fff7ef;
+  color:var(--ink);
+  border-color:var(--line);
+}
+
+.source-card h3{
+  color:var(--ink);
+}
+
+.source-card .source{
+  color:var(--ink);
+  background:#fff;
+}
+
+footer{
+  border-top:4px solid var(--line);
+  background:var(--paper);
+  box-shadow:0 -7px 0 var(--line);
+}
+
+/* A little imperfection, without making the page wobble. */
+.intro .kicker{
+  transform:rotate(-1deg);
+}
+
+.party-q:nth-child(even),
+.quote:nth-child(even){
+  transform:translateX(2px);
+}
+
+@media (max-width:980px){
+  .site-header nav{
+    gap:4px;
+  }
+  .site-header nav a{
+    box-shadow:3px 3px 0 var(--line);
+  }
+}
+
+@media (max-width:720px){
+  .site-header{
+    box-shadow:0 5px 0 var(--line);
+  }
+  .site-header nav{
+    gap:5px;
+  }
+  .site-header nav a{
+    margin:0;
+    border:2px solid var(--line);
+    box-shadow:3px 3px 0 var(--line);
+  }
+  .panel,
+  .ratio-copy,
+  .bar-chart,
+  .person,
+  .adjust,
+  .magnitude-grid,
+  .compare-bars,
+  .stock-copy,
+  .stock-boxes,
+  .debt-stat,
+  .debt-compare,
+  .chart-card,
+  .debt-copy,
+  .flow-row,
+  .guard,
+  .ownership .text,
+  .ownership .viz,
+  .fund,
+  .party-q,
+  .party-table-wrap,
+  .quote,
+  .faq-list details,
+  .deep details,
+  .source-card{
+    box-shadow:5px 5px 0 var(--line);
+  }
+  .party-q:nth-child(even),
+  .quote:nth-child(even){
+    transform:none;
+  }
+}
