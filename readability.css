@@ -1,3 +1,13 @@
+.hero-numbers article,
+.age-panel,
+.history-strip,
+.ratio-block,
+.magnitude-callout > div,
+.stock-lab,
+.fund-sim {
+  position: relative;
+}
+
 .source-badge {
   position: absolute;
   top: 12px;
@@ -16,6 +26,11 @@
 .source-badge:hover { background: var(--acid); }
 .source-badge.light { background: var(--ink); color: var(--white); border-color: var(--white); }
 .source-badge.light:hover { background: var(--acid); color: var(--ink); }
+.hero-numbers .source-badge { width: 28px; height: 28px; top: 9px; right: 9px; font-size: 15px; }
+.age-panel-head { padding-right: 38px; }
+.history-strip > .source-badge { top: 10px; right: 10px; }
+.ratio-block > .source-badge { top: 0; right: 0; }
+.magnitude-callout > div { padding-top: 42px; }
 
 /* Debt section: make the annual cost, not the stock, the visual subject. */
 .debt {
@@ -186,6 +201,7 @@
 .debt .source-link.light { color: var(--ink); }
 
 @media (max-width: 800px) {
+  .source-badge { width: 29px; height: 29px; font-size: 15px; }
   .debt-compare { grid-template-columns: 1fr; }
   .debt-versus {
     min-height: 56px;
