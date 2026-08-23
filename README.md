@@ -1,10 +1,23 @@
 # retraite
 
-Prototype d'un site politique sur les retraites et la propriété collective du capital.
+Site politique statique sur les retraites, l'équité entre générations et la propriété sociale du capital.
 
-## Ouvrir le site
+## Ce que montre la version actuelle
 
-Le site est statique. Les fragments de données sont chargés avec `fetch`, donc il faut le servir en HTTP plutôt que d'ouvrir `index.html` directement.
+Le parcours principal tient sur quelques idées visibles avant les détails :
+
+1. la structure par âge a changé ;
+2. protéger une petite pension n'oblige pas à protéger une pension élevée de la même manière ;
+3. une fortune est un stock, une retraite un flux annuel ;
+4. une partie des prélèvements sur le capital peut construire un actif collectif durable ;
+5. les revenus de cet actif peuvent compléter la répartition à long terme ;
+6. les partis sont comparés sur les mêmes critères, avec dates et sources.
+
+Le site sépare les données observées, les simulations et la proposition politique. Les chiffres importants renvoient vers leur source.
+
+## Lancer en local
+
+Le site utilise `fetch()` pour assembler les données du comparateur. Il faut donc le servir en HTTP.
 
 ```bash
 python -m http.server 8080
@@ -12,16 +25,10 @@ python -m http.server 8080
 
 Puis ouvrir `http://localhost:8080`.
 
-## Contenu
+## Fichiers
 
-- démographie 1946 / 2026 et ratio cotisants-retraités ;
-- cas Bernard / Léa pour rendre les arbitrages concrets ;
-- ordres de grandeur LFI, retraites, stock contre flux ;
-- dette et intérêts ;
-- proposition de fonds collectif inaliénable ;
-- simulateur d'accumulation ;
-- comparateur des principaux partis ;
-- citations récentes et sources cliquables ;
-- annexes sur le financement public des retraites.
-
-Les hypothèses de travail sont présentées comme telles. Les données observées renvoient vers leurs sources.
+- `content-a.js`, `content-b.js`, `content-c.js` contiennent le parcours éditorial ;
+- `data-a.js`, `data-b.js`, `data-c.js` contiennent les positions politiques, citations et sources ;
+- `data-loader.js` assemble ces données avant de charger l'application ;
+- `app.js` gère les graphiques et interactions ;
+- `styles-a.css`, `styles-b.css`, `styles-c.css` contiennent la mise en page responsive.
