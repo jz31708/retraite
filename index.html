@@ -1,24 +1,375 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Une proposition de gauche pour les retraites : garder la répartition, protéger les petites pensions et construire un patrimoine collectif.">
-<title>Retraite</title>
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="final-1.css">
-<link rel="stylesheet" href="final-2.css">
-<link rel="stylesheet" href="final-3.css">
-<link rel="stylesheet" href="final-4.css?v=b81c53f">
-<link rel="stylesheet" href="neubrutal.css?v=b81c53f">
-<link rel="stylesheet" href="editorial-final.css?v=2">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#151412">
+  <meta name="description" content="Comprendre les retraites françaises en 2026 : démographie, financement, arbitrages politiques et scénario de fonds collectif.">
+  <title>Retraites 2070 — Une démographie, plusieurs choix</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="v3.css">
 </head>
 <body>
-<a class="skip" href="#main">Aller au contenu</a>
-<header class="site-header" id="top"><div class="wrap"><a class="brand" href="#top">retraite</a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mainNav">Menu</button><nav id="mainNav" aria-label="Navigation principale"><a href="#constat">Le constat</a><a href="#ordre">Qui paie ?</a><a href="#proposition">La proposition</a><a href="#partis">Les partis</a><a href="#sources">Sources</a></nav></div></header>
-<main id="main"></main>
-<footer><div class="wrap"><div><strong style="font-size:22px;text-transform:uppercase">retraite</strong><p>Proposition politique. Données, simulations et positions sont distinguées et sourcées.</p></div><div class="links"><a href="#top">Haut de page</a><a href="https://github.com/jz31708/retraite" target="_blank" rel="noreferrer">Code source</a></div></div></footer>
-<script src="ux.js?v=2"></script>
-<script src="final-loader.js?v=2"></script>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="#top" aria-label="Retraites 2070, retour en haut">
+      <span class="brand-mark">R/70</span>
+      <span class="brand-copy">Retraites<br><b>édition 2026</b></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">Menu</button>
+    <nav id="siteNav" class="site-nav" aria-label="Navigation principale">
+      <a href="#demographie">Démographie</a>
+      <a href="#argent">Argent</a>
+      <a href="#proposition">Proposition</a>
+      <a href="#simulateur">Simuler</a>
+      <a href="#politiques">Politiques</a>
+      <a href="#sources">Sources</a>
+    </nav>
+  </header>
+
+  <main id="contenu">
+    <section class="hero" id="top">
+      <div class="hero-noise" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <p class="eyebrow">France · système de retraite · données 2026</p>
+        <h1>On débat de <em>60, 62 ou 64 ans.</em><br>Le vrai sujet est plus large.</h1>
+        <p class="hero-lead">La France vieillit. Le système peut rester par répartition, changer ses paramètres, taxer davantage, sous-indexer certaines pensions, accumuler du capital collectif — ou combiner ces leviers. Ici, on sépare les faits des choix.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#demographie">Voir l'équation</a>
+          <a class="text-link" href="#methode">Comment les chiffres sont construits →</a>
+        </div>
+        <div class="hero-stats" aria-label="Trois chiffres clés">
+          <article>
+            <span class="stat-label">65+ pour 100 personnes de 20–64 ans</span>
+            <strong><span class="counter" data-target="40">40</span> → <span class="accent">62</span></strong>
+            <small>2026 → 2070 · scénario central Insee</small>
+          </article>
+          <article>
+            <span class="stat-label">Solde projeté du système</span>
+            <strong>−6,8 Md€ <span class="arrow">→</span> <span class="accent">−2,4 % PIB</span></strong>
+            <small>2030 → 2070 · scénario de référence COR 2026</small>
+          </article>
+          <article>
+            <span class="stat-label">Dépenses brutes de retraite</span>
+            <strong><span class="counter" data-target="422.2" data-decimals="1">422,2</span> Md€</strong>
+            <small>2025 · 14,1 % du PIB · COR</small>
+          </article>
+        </div>
+      </div>
+      <a class="hero-scroll" href="#demographie" aria-label="Continuer vers la démographie">↓</a>
+    </section>
+
+    <section class="section section-cream" id="demographie" data-nav="demographie">
+      <div class="section-head split-head">
+        <div>
+          <p class="eyebrow dark">01 · L'équation</p>
+          <h2>La France change de forme.</h2>
+        </div>
+        <p class="section-intro">Le point solide n'est pas « la France va disparaître ». C'est le vieillissement : dans le scénario central Insee, le ratio des 65+ aux 20–64 ans passe d'environ 40 pour 100 en 2026 à 62 pour 100 en 2070.</p>
+      </div>
+
+      <div class="data-stage">
+        <div class="chart-panel panel-black">
+          <div class="chart-toolbar">
+            <div>
+              <span class="data-badge projection">Projection officielle</span>
+              <h3>Le même pays, moins de jeunes, plus de seniors</h3>
+            </div>
+            <div class="chart-switch" role="group" aria-label="Variable démographique">
+              <button class="chip active" data-demo-metric="ratio">Ratio 65+/20–64</button>
+              <button class="chip" data-demo-metric="population">Population</button>
+            </div>
+          </div>
+          <div class="svg-wrap">
+            <svg id="demoChart" viewBox="0 0 900 390" role="img" aria-labelledby="demoChartTitle demoChartDesc">
+              <title id="demoChartTitle">Évolution démographique française de 2026 à 2070</title>
+              <desc id="demoChartDesc">Graphique interactif affichant le ratio des personnes de 65 ans ou plus aux personnes de 20 à 64 ans, ou la population totale.</desc>
+            </svg>
+          </div>
+          <div class="timeline-control">
+            <label for="demoYear">Année <output id="demoYearOut">2026</output></label>
+            <input id="demoYear" type="range" min="2026" max="2070" step="1" value="2026">
+          </div>
+        </div>
+
+        <aside class="demo-readout" aria-live="polite">
+          <p class="micro-label">À cette date</p>
+          <strong id="demoRatioBig">40</strong>
+          <span id="demoRatioUnit">personnes de 65+ pour 100 personnes de 20–64 ans</span>
+          <div class="readout-grid">
+            <div><b id="demoPopulation">69,1 M</b><span>habitants</span></div>
+            <div><b id="demoOlder">22 %</b><span>65 ans ou +</span></div>
+            <div><b id="demoBalance">déjà négatif</b><span>solde naturel</span></div>
+          </div>
+          <p class="annotation" id="demoAnnotation">Point de départ des nouvelles projections Insee 2026.</p>
+        </aside>
+      </div>
+
+      <div class="fact-ribbon">
+        <article><b>−8,9 M</b><span>de personnes de moins de 45 ans entre 2026 et 2070</span></article>
+        <article><b>+5,8 M</b><span>de personnes de 65 ans ou plus</span></article>
+        <article><b>+4,6 M</b><span>de personnes de 80 ans ou plus</span></article>
+        <article><b>1,45</b><span>enfant par femme à partir de 2028 dans le scénario central</span></article>
+      </div>
+      <p class="source-line">Source principale : <a data-source="insee-proj" href="#sources">Insee, projections de population 2026</a>. Une projection n'est pas une prévision certaine.</p>
+    </section>
+
+    <section class="section section-white" id="argent" data-nav="argent">
+      <div class="section-head">
+        <p class="eyebrow dark">02 · L'argent</p>
+        <h2>Avant de choisir une réforme, il faut savoir ce qu'on finance.</h2>
+        <p class="section-intro wide">Deux pièges brouillent le débat : mélanger des périmètres comptables différents et comparer un stock de patrimoine à une dépense annuelle. On les démonte séparément.</p>
+      </div>
+
+      <div class="thousand-grid">
+        <article class="thousand-card">
+          <div class="card-topline"><span class="data-badge observed">Donnée 2023</span><span>Direction du Budget · Insee</span></div>
+          <h3>Sur 1 000 € de prélèvements obligatoires…</h3>
+          <div class="treemap" id="treemap" aria-label="Répartition de 1 000 euros de prélèvements obligatoires"></div>
+          <p class="caption"><b>253 €</b> financent les retraites dans cette infographie des dépenses publiques. Ce n'est ni « la part de vos impôts personnels » ni un budget isolé de l'État : c'est une représentation agrégée de l'ensemble des administrations publiques.</p>
+          <p class="source-line"><a data-source="budget-1000" href="#sources">Source : Direction du Budget, données Insee 2023</a></p>
+        </article>
+
+        <article class="money-story">
+          <p class="eyebrow dark">Le chiffre à garder</p>
+          <div class="big-number">422,2 <small>Md€</small></div>
+          <h3>de dépenses brutes de retraite en 2025</h3>
+          <p>Soit <b>14,1 % du PIB</b>. Le COR projette une part proche de ce niveau jusqu'en 2045, puis 15,3 % en 2070 dans son scénario de référence.</p>
+          <div class="mini-scale" aria-label="Part des retraites dans le PIB">
+            <div><span>2025</span><i style="--v:14.1"></i><b>14,1 %</b></div>
+            <div><span>2045</span><i style="--v:14.2"></i><b>14,2 %</b></div>
+            <div><span>2070</span><i style="--v:15.3"></i><b>15,3 %</b></div>
+          </div>
+          <p class="callout-inline">Le problème 2026 n'est donc pas seulement « les dépenses explosent ». Le COR projette surtout un <b>écart durable entre ressources et dépenses</b>, qui devient beaucoup plus grand à long terme.</p>
+          <p class="source-line"><a data-source="cor-2026" href="#sources">Source : COR, rapport annuel juin 2026</a></p>
+        </article>
+      </div>
+
+      <div class="accounting-block">
+        <div class="accounting-title">
+          <p class="eyebrow dark">Un même coût, plusieurs conventions</p>
+          <h3>Le cas des retraites des fonctionnaires d'État</h3>
+          <p>En 2026, l'État-employeur verse au CAS Pensions une contribution de <b>82,28 %</b> du traitement indiciaire pour les civils et <b>126,07 %</b> pour les militaires. Ces taux ne se lisent pas comme une cotisation patronale privée ordinaire : ils servent aussi à équilibrer le régime.</p>
+        </div>
+        <div class="accounting-cards">
+          <article class="rate-card"><span>Civils</span><strong>82,28 %</strong><small>taux employeur État 2026</small></article>
+          <article class="rate-card"><span>Militaires</span><strong>126,07 %</strong><small>taux employeur État 2026</small></article>
+          <article class="rate-card orange"><span>IPP</span><strong>18 Md€</strong><small>estimation de la subvention implicite liée au déséquilibre démographique</small></article>
+        </div>
+        <div class="education-reclass">
+          <div>
+            <span>Budget enseignement scolaire 2023 affiché</span>
+            <strong>81,3 Md€</strong>
+          </div>
+          <div class="reclass-arrow">→ <small>reclassement comptable IPP</small></div>
+          <div>
+            <span>Budget corrigé dans cette convention</span>
+            <strong>70,7 Md€</strong>
+          </div>
+        </div>
+        <p class="warning-note"><b>Ce n'est pas 10,6 Md€ d'économies réelles.</b> L'IPP propose de déplacer une partie du coût des pensions hors des budgets ministériels pour rendre le coût salarial et le transfert de solidarité plus lisibles. Le solde global des finances publiques ne disparaît pas.</p>
+        <p class="source-line"><a data-source="legifrance-cas" href="#sources">Légifrance</a> · <a data-source="ipp-cas" href="#sources">Institut des politiques publiques</a></p>
+      </div>
+    </section>
+
+    <section class="section section-orange" id="humains">
+      <div class="section-head split-head">
+        <div>
+          <p class="eyebrow">03 · Qui ajuste ?</p>
+          <h2>Une règle uniforme ne touche pas tout le monde pareil.</h2>
+        </div>
+        <p class="section-intro">L'équité ne se résume ni à « actifs contre retraités » ni à « riches contre pauvres ». Le niveau de pension, le patrimoine, la pénibilité et l'âge d'entrée dans l'emploi changent complètement la situation.</p>
+      </div>
+      <div class="people-grid">
+        <article class="person-card">
+          <img src="assets/people/monique.jpg" alt="Portrait illustratif de Monique, personnage fictif">
+          <div><span class="fiction">Cas fictif</span><h3>Monique, 78 ans</h3><b>1 180 €/mois</b><p>Locataire. Une sous-indexation générale de 2 % lui retire environ 24 € par mois de pouvoir d'achat relatif sur la première année.</p><span class="person-principle">Priorité : protection forte.</span></div>
+        </article>
+        <article class="person-card">
+          <img src="assets/people/bernard.jpg" alt="Portrait illustratif de Bernard, personnage fictif">
+          <div><span class="fiction">Cas fictif</span><h3>Bernard, 72 ans</h3><b>5 000 €/mois</b><p>Propriétaire sans crédit. Une indexation de +2 % représente +100 €/mois, soit +1 200 €/an, financés de façon récurrente.</p><span class="person-principle">Question : faut-il garantir le même taux d'indexation ?</span></div>
+        </article>
+        <article class="person-card">
+          <img src="assets/people/lea.jpg" alt="Portrait illustratif de Léa, personnage fictif">
+          <div><span class="fiction">Cas fictif</span><h3>Léa, 29 ans</h3><b>3 100 €/mois</b><p>Active, locataire, encore sans patrimoine important. Son salaire n'est pas automatiquement indexé et elle finance aujourd'hui les pensions par les prélèvements.</p><span class="person-principle">Question : comment partager l'effort entre générations ?</span></div>
+        </article>
+      </div>
+      <p class="small-note">Ces trois profils sont des exemples pédagogiques fictifs. Ils n'estiment pas la situation moyenne de leur génération.</p>
+    </section>
+
+    <section class="section section-black" id="stockflux">
+      <div class="section-head split-head">
+        <div><p class="eyebrow">04 · Stock ≠ flux</p><h2>Une fortune se saisit une fois.<br>Une pension se paie chaque mois.</h2></div>
+        <p class="section-intro">Taxer fortement les hauts revenus et patrimoines peut financer des politiques publiques. Mais une dépense annuelle structurelle exige un flux annuel durable. C'est la distinction centrale du modèle proposé ici.</p>
+      </div>
+      <div class="stock-flow-demo">
+        <article>
+          <span class="sf-tag">STOCK</span>
+          <div class="sf-visual pile" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <h3>Patrimoine</h3>
+          <p>Un ensemble d'actifs détenus à un instant donné. Le vendre ou le confisquer finance une dépense ponctuelle — puis le stock a disparu.</p>
+        </article>
+        <div class="versus">≠</div>
+        <article>
+          <span class="sf-tag yellow">FLUX</span>
+          <div class="sf-visual stream" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+          <h3>Retraites</h3>
+          <p>Un paiement récurrent. Il faut le financer cette année, l'année prochaine, puis la suivante. Les dépenses 2025 sont de l'ordre de 422 Md€.</p>
+        </article>
+      </div>
+      <div class="stock-thesis">L'idée du site : <b>transformer une partie du stock privé concentré en stock collectif productif</b>, puis utiliser progressivement son rendement comme nouveau flux.</div>
+    </section>
+
+    <section class="section section-cream" id="proposition" data-nav="proposition">
+      <div class="section-head">
+        <p class="eyebrow dark">05 · Une proposition</p>
+        <h2>Répartition + patrimoine collectif.</h2>
+        <p class="section-intro wide">Pas une retraite 100 % par capitalisation. Pas non plus une promesse selon laquelle la démographie peut être neutralisée uniquement par l'impôt. Le scénario teste un socle public redistributif et un fonds collectif qui accumule des actifs sur plusieurs décennies.</p>
+      </div>
+
+      <div class="proposal-flow" aria-label="Schéma de la proposition">
+        <article><span>1</span><h3>Répartition</h3><p>Les actifs continuent de financer les pensions. Les petites pensions et la solidarité restent prioritaires.</p></article>
+        <div class="flow-arrow">+</div>
+        <article><span>2</span><h3>Accumulation</h3><p>Une contribution dédiée et une partie des recettes patrimoniales alimentent un fonds public sanctuarisé.</p></article>
+        <div class="flow-arrow">→</div>
+        <article class="highlight"><span>3</span><h3>Propriété collective</h3><p>Le fonds possède des actifs productifs diversifiés. Son capital n'est pas consommé par le budget courant.</p></article>
+        <div class="flow-arrow">→</div>
+        <article><span>4</span><h3>Rendement</h3><p>À maturité, une fraction prudente des revenus du fonds contribue aux retraites.</p></article>
+      </div>
+
+      <div class="ownership-stage">
+        <div class="ownership-copy">
+          <span class="data-badge assumption">Scénario du site</span>
+          <h3>Le point de départ existe déjà : le FRR.</h3>
+          <p>Le Fonds de réserve pour les retraites détenait <b>20,7 Md€</b> d'actifs fin 2025. Le scénario ne prétend pas que ce montant suffit : il l'utilise comme point de départ pédagogique pour tester une accumulation beaucoup plus ambitieuse.</p>
+          <p>Le fonds imaginé ici aurait deux poches : <b>une poche stratégique française</b> et <b>une poche mondiale diversifiée</b>. Concentrer toute la retraite française dans les seules entreprises françaises cumulerait trop de risques.</p>
+          <p class="source-line"><a data-source="frr-2025" href="#sources">Source : FRR, résultats 2025</a></p>
+        </div>
+        <div class="ownership-orbit" aria-hidden="true">
+          <div class="nation">Fonds<br>collectif</div>
+          <span style="--a:12deg">Industrie</span><span style="--a:70deg">Énergie</span><span style="--a:126deg">PME / ETI</span><span style="--a:190deg">Monde</span><span style="--a:246deg">Infrastructures</span><span style="--a:306deg">Tech</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-yellow" id="simulateur" data-nav="simulateur">
+      <div class="section-head split-head">
+        <div><p class="eyebrow dark">06 · Simulateur</p><h2>Combien peut grossir un fonds ?</h2></div>
+        <p class="section-intro">Le calcul est volontairement simple et auditable : capital initial, versement annuel constant, rendement réel constant, puis taux de prélèvement annuel à maturité. Ce n'est ni une garantie de marché ni un chiffrage budgétaire complet de transition.</p>
+      </div>
+
+      <div class="sim-layout">
+        <form class="sim-controls" id="fundControls" onsubmit="return false">
+          <div class="control"><label for="fundAnnual">Versement annuel <output id="fundAnnualOut">40 Md€</output></label><input id="fundAnnual" type="range" min="10" max="80" step="5" value="40"><small>ressource dédiée à l'accumulation</small></div>
+          <div class="control"><label for="fundReturn">Rendement réel <output id="fundReturnOut">3,0 %</output></label><input id="fundReturn" type="range" min="1" max="5" step="0.25" value="3"><small>après inflation, hypothèse constante</small></div>
+          <div class="control"><label for="fundYears">Horizon <output id="fundYearsOut">40 ans</output></label><input id="fundYears" type="range" min="10" max="50" step="5" value="40"><small>les premières décennies réinvestissent le rendement</small></div>
+          <div class="control"><label for="fundDraw">Prélèvement à maturité <output id="fundDrawOut">2,5 %</output></label><input id="fundDraw" type="range" min="1" max="4" step="0.25" value="2.5"><small>part annuelle du capital utilisée une fois le fonds mûr</small></div>
+          <button type="button" class="btn btn-dark" id="fundReset">Revenir au scénario central</button>
+        </form>
+        <div class="sim-result">
+          <div class="result-top">
+            <div><span>Capital final</span><strong id="fundCapital">3 084 Md€</strong></div>
+            <div><span>Flux annuel à maturité</span><strong id="fundPayout">77 Md€/an</strong></div>
+          </div>
+          <svg id="fundChart" viewBox="0 0 900 380" role="img" aria-labelledby="fundChartTitle fundChartDesc"><title id="fundChartTitle">Projection du fonds collectif</title><desc id="fundChartDesc">Évolution du capital du fonds selon les hypothèses choisies.</desc></svg>
+          <div class="benchmark-row">
+            <span><i></i> Capital du fonds</span>
+            <b id="fundVsPensions">≈ 18 % des dépenses de retraite 2025 en flux annuel</b>
+          </div>
+        </div>
+      </div>
+      <div class="model-caveats">
+        <b>Ce que le simulateur ne fait pas :</b> il ne chiffre pas le coût de double financement pendant la transition, les effets macroéconomiques des nouveaux prélèvements, la volatilité annuelle, les impôts sur rendement, ni les règles juridiques d'investissement. Ces points sont explicités dans <a href="MODEL.md">MODEL.md</a>.
+      </div>
+    </section>
+
+    <section class="section section-white" id="arbitrages">
+      <div class="section-head">
+        <p class="eyebrow dark">07 · Laboratoire</p>
+        <h2>Il n'existe pas de levier gratuit.</h2>
+        <p class="section-intro wide">Le COR rappelle trois grandes familles d'ajustement financier : dépenses/pensions, prélèvements, âge/emploi. On ajoute ici le capital collectif comme quatrième source de revenus futurs — mais il faut d'abord le constituer.</p>
+      </div>
+      <div class="lever-lab">
+        <div class="lever-controls">
+          <div class="control"><label for="levyRevenue">Recettes supplémentaires <output id="levyRevenueOut">0,5 pt de PIB</output></label><input id="levyRevenue" type="range" min="0" max="2.5" step="0.1" value="0.5"></div>
+          <div class="control"><label for="levyPension">Effort sur dépenses/pensions <output id="levyPensionOut">0,5 pt de PIB</output></label><input id="levyPension" type="range" min="0" max="2.5" step="0.1" value="0.5"></div>
+          <div class="control"><label for="levyWork">Effet emploi / durée d'activité <output id="levyWorkOut">0,5 pt de PIB</output></label><input id="levyWork" type="range" min="0" max="2.5" step="0.1" value="0.5"></div>
+        </div>
+        <div class="gap-card">
+          <span class="data-badge simulation">Simulation illustrative</span>
+          <p>Déficit COR 2070 avant nouveaux leviers</p>
+          <strong>−2,4 % PIB</strong>
+          <div class="gap-arrow">↓</div>
+          <p>Après les trois effets saisis</p>
+          <strong id="gapAfter">−0,9 % PIB</strong>
+          <div class="gap-meter"><i id="gapMeter"></i></div>
+          <small>Simple addition comptable d'effets exprimés en points de PIB. Aucun multiplicateur macroéconomique n'est appliqué.</small>
+        </div>
+      </div>
+      <p class="source-line">Les catégories de leviers viennent du <a data-source="cor-levers" href="#sources">COR</a>. Les valeurs saisies sont vos hypothèses, pas des estimations officielles.</p>
+    </section>
+
+    <section class="section section-cream" id="politiques" data-nav="politiques">
+      <div class="section-head split-head">
+        <div><p class="eyebrow dark">08 · Politiques 2026</p><h2>Quatre questions. Pas un tableur.</h2></div>
+        <p class="section-intro">Les positions changent vite à l'approche de 2027. Les cartes ci-dessous résument des documents ou déclarations identifiés et datés. Le RN est explicitement indiqué comme ligne non stabilisée lorsque ses dirigeants divergent.</p>
+      </div>
+
+      <div class="party-picker" role="tablist" aria-label="Choisir une formation politique" id="partyPicker"></div>
+      <div class="party-profile" id="partyProfile" aria-live="polite"></div>
+
+      <div class="architecture-strip">
+        <div class="architecture-head"><p class="eyebrow dark">Architectures, pas partis</p><h3>Une même démographie, plusieurs constructions institutionnelles</h3></div>
+        <div class="architecture-grid" id="architectureGrid"></div>
+      </div>
+    </section>
+
+    <section class="section section-black final-choice">
+      <div class="final-inner">
+        <p class="eyebrow">09 · La conclusion</p>
+        <h2>Une démographie.<br><span>Plusieurs choix politiques.</span></h2>
+        <p>La démographie impose une contrainte, pas une politique unique. À long terme, il faut combiner plusieurs éléments : davantage de travail ou d'emploi, davantage de prélèvements, des pensions relativement moins généreuses pour certains, plus d'actifs, plus de productivité, du capital accumulé — ou davantage de dette.</p>
+        <p>La proposition défendue ici choisit de <b>protéger fortement le socle redistributif</b>, de faire davantage contribuer les pensions élevées lorsque nécessaire et de construire progressivement un patrimoine collectif productif. On peut contester ce choix. Mais pas supprimer l'équation.</p>
+        <a class="btn btn-primary" href="#simulateur">Tester les hypothèses</a>
+      </div>
+    </section>
+
+    <section class="section section-white method" id="methode">
+      <div class="section-head">
+        <p class="eyebrow dark">10 · Méthode</p>
+        <h2>Fait, projection, simulation : ne pas mélanger.</h2>
+      </div>
+      <div class="method-grid">
+        <article><span class="data-badge observed">Observé</span><h3>Mesuré dans le passé</h3><p>Ex. dépenses 2025, actif du FRR fin 2025.</p></article>
+        <article><span class="data-badge projection">Projection officielle</span><h3>Scénario institutionnel</h3><p>Ex. démographie Insee et solde COR jusqu'en 2070. Ce ne sont pas des certitudes.</p></article>
+        <article><span class="data-badge party">Programme / déclaration</span><h3>Position politique</h3><p>Le site décrit la position et sa date ; il ne la transforme pas en prévision économique.</p></article>
+        <article><span class="data-badge simulation">Simulation du site</span><h3>Hypothèses explicites</h3><p>Ex. rendement réel du fonds ou addition d'effets en points de PIB.</p></article>
+      </div>
+      <div class="audit-box">
+        <div><h3>Audit du modèle</h3><p>Les formules, périmètres, conventions et limites sont documentés dans le dépôt.</p></div>
+        <a class="btn btn-dark" href="MODEL.md">Lire MODEL.md</a>
+      </div>
+    </section>
+
+    <section class="section section-cream sources" id="sources" data-nav="sources">
+      <div class="section-head split-head">
+        <div><p class="eyebrow dark">11 · Sources</p><h2>Chaque chiffre important doit pouvoir être attaqué.</h2></div>
+        <p class="section-intro">Priorité aux sources publiques et primaires. La presse sert surtout aux positions politiques récentes lorsqu'aucun programme stabilisé n'existe.</p>
+      </div>
+      <div class="source-filters" id="sourceFilters" role="group" aria-label="Filtrer les sources"></div>
+      <div class="source-list" id="sourceList"></div>
+      <p class="update-note">Dernière passe éditoriale : 26 août 2026. Les positions politiques sont datées dans chaque source et doivent être réévaluées si elles évoluent.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div><b>Retraites 2070</b><span>Un outil de compréhension, pas une prévision individuelle.</span></div>
+    <a href="#top">Retour en haut ↑</a>
+  </footer>
+
+  <script src="v3-data.js"></script>
+  <script src="v3.js"></script>
 </body>
 </html>
