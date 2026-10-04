@@ -1,36 +1,36 @@
-# retraite
+# Retraites 2070
 
-Site politique sur les retraites, l'équité entre générations et une proposition de propriété sociale du capital.
+Un site éditorial interactif sur le système français de retraite, son financement et une proposition de fonds collectif. Il sépare les données observées, les projections officielles, les positions politiques sourcées et les hypothèses du simulateur.
 
-## Direction
+## Lancer le site en local
 
-Le site part d'un constat simple : la répartition reste un socle de solidarité, mais la démographie et la charge transmise aux actifs imposent de choisir qui absorbe l'ajustement. La proposition protège fortement les petites pensions, accepte un effort sur les pensions élevées et construit progressivement un fonds collectif inaliénable dont les revenus peuvent financer une part croissante des retraites.
+Le projet est volontairement statique et ne dépend d'aucune compilation :
 
-Le comparateur politique sert à situer cette proposition face aux partis. Il ne remplace pas le propos principal.
-
-## Direction visuelle
-
-Le design emprunte davantage au journal, au tract et au média politique indépendant qu'à une landing page produit :
-
-- noir, rouge, vert acide et papier brut ;
-- typographie très large et condensée ;
-- aplats francs, traits épais, angles droits ;
-- presque aucune ombre ni carte arrondie ;
-- graphiques intégrés à la mise en page comme des éléments éditoriaux ;
-- un code couleur différent pour chaque grand chapitre.
-
-`editorial.css` est chargé après les feuilles de style de base. Il porte cette identité et doit être traité comme la direction visuelle du projet, pas comme un thème facultatif.
-
-## Lancer le site
-
-Le site est statique. Les fichiers de données du comparateur sont chargés côté navigateur, donc lancez un petit serveur HTTP depuis la racine du dépôt :
-
-```bash
+```powershell
 python -m http.server 8080
 ```
 
-Puis ouvrez `http://localhost:8080`.
+Ouvrir ensuite `http://localhost:8080`. Pour vérifier la racine GitHub Pages `/retraite/`, les références d'images, de styles et de scripts restent relatives au dépôt.
 
-## Méthode
+## Vérifier le modèle
 
-Les chiffres observés renvoient vers leurs sources. Les simulations sont annoncées comme telles. Les choix politiques sont séparés des constats statistiques. Quand deux séries n'ont pas le même périmètre, le site le dit au lieu de les fusionner.
+Node.js 20 ou plus récent suffit; aucune dépendance externe n'est requise.
+
+```powershell
+npm test
+```
+
+Les tests vérifient les formules de financement et de retraits, les ordres de rendement, l'intégrité du registre de sources, la correspondance entre les fiches affichées et leurs références, ainsi que quelques invariants du contenu.
+
+## Parcours du site
+
+1. Évolution démographique et périmètre des ratios.
+2. Dépenses, recettes et conventions de comptabilité.
+3. Vignettes fictives pour montrer l'incidence possible d'un même taux.
+4. Proposition de préserver la répartition et de bâtir un fonds collectif, avec des garde-fous de propriété, de retrait et de contrôle à adopter.
+5. Registre explicite des ressources de transition.
+6. Simulateur cible/financé avec rendements, frais, retraits et séquence.
+7. Leviers COR séparés du fonds et comparateur politique sourcé.
+8. Méthode, limites et fiches de sources.
+
+Le modèle, ses conventions et ses limites sont détaillés dans [MODEL.md](MODEL.md). La note [EDITORIAL-V4.md](EDITORIAL-V4.md) est conservée comme archive et ne décrit plus le site courant.
