@@ -131,6 +131,14 @@ h1 em,h2 em{letter-spacing:-.02em}
 .pivot-section>*{width:min(100%,var(--max));margin-inline:auto}
 .pivot-section h2{margin-top:.6rem;margin-bottom:1rem;font-size:clamp(2.2rem,5.2vw,5rem);line-height:1.02;letter-spacing:-.035em}
 .pivot-section p:last-child{max-width:620px;font-size:1.05rem;margin-top:0}
+
+/* Make the demographic ratio's percent sign visible beside the headline value. */
+.hero-number strong{font-size:clamp(7rem,10vw,9rem)}
+.hero-number strong .hero-percent{font-size:.36em;letter-spacing:-.02em;vertical-align:.22em;margin-left:.04em}
+.ratio-unit{font-size:.42em;letter-spacing:-.02em;vertical-align:.22em}
+.ratio-range .ratio-unit{font-size:.78em;vertical-align:.04em}
+@media(max-width:740px){.hero-number strong{font-size:clamp(7rem,30vw,9rem)}}
+@media(max-width:390px){.hero-number strong{font-size:clamp(6.5rem,31vw,7.2rem)}}
 .bilan-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;width:min(100%,var(--max));margin:2.5rem auto 0}
 .bilan-grid article{padding:1.6rem;background:var(--paper);border-top:5px solid var(--ink)}
 .bilan-grid article.risk{border-top-color:var(--orange)}
