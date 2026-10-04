@@ -1,4 +1,6 @@
-import { evidenceLabels, partyComparisons } from "../../data/site-data.js";
+import { evidenceLabels, partyComparisons as allComparisons } from "../../data/site-data.js";
+
+const partyComparisons = allComparisons.filter((item) => item.id !== "site-model");
 
 const leverLabels = {
   work:"Âge et durée d'activité",
