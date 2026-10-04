@@ -10,7 +10,8 @@ const value = (id, fallback = 0) => {
   const number = Number(get(id)?.value);
   return Number.isFinite(number) ? number : fallback;
 };
-const money = (amount) => `${euroFormat.format(amount)} Md€`;
+const bigFormat = new Intl.NumberFormat("fr-FR", { maximumFractionDigits:0 });
+const money = (amount) => `${(Math.abs(amount) >= 100 ? bigFormat : euroFormat).format(amount)} Md€`;
 const percent = (amount) => `${pctFormat.format(amount)} %`;
 const clamp = (number, min, max) => Math.min(max, Math.max(min, number));
 

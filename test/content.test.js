@@ -5,6 +5,7 @@ import {
   architectureComparisons, budgetDistribution, claims, demographicAnchors, modelDefaults,
   partyComparisons, sourceRegistry, spendingAnchors
 } from "../data/site-data.js";
+import { levers } from "../data/levers.js";
 
 const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
 const sourceCards = new Map(
@@ -14,7 +15,7 @@ const sourceCards = new Map(
 const sourceIds = new Set(sourceRegistry.map((source) => source.id));
 
 test("every registered source has a matching accessible source card and destination", () => {
-  assert.equal(sourceRegistry.length, 14);
+  assert.equal(sourceRegistry.length, 19);
   assert.equal(sourceCards.size, sourceRegistry.length);
   for (const source of sourceRegistry) {
     const card = sourceCards.get(source.id);
@@ -22,6 +23,14 @@ test("every registered source has a matching accessible source card and destinat
     assert.equal(card.category, source.category, `${source.id} category drift`);
     assert.equal(card.url, source.url, `${source.id} URL drift`);
     assert.ok(source.scope && source.supports && source.checkedAt, `${source.id} missing audit metadata`);
+  }
+});
+
+test("every financing lever points to a reviewed source card", () => {
+  for (const lever of levers) {
+    const source = sourceRegistry.find((item) => item.id === lever.sourceId);
+    assert.ok(source, `${lever.id} references an unregistered source`);
+    assert.equal(source.url, lever.sourceUrl, `${lever.id} source URL drift`);
   }
 });
 
