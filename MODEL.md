@@ -1,6 +1,6 @@
 # Retraites 2070 — modèle, sources et conventions
 
-V6 · Vérification des sources : 3 octobre 2026. Les valeurs affichées, les données structurées et les textes politiques ne sont pas tous du même type. Les fiches du site identifient le périmètre, la date, l'auteur et ce que chaque source étaye.
+V14 · Vérification des sources : 5 octobre 2026. Les valeurs affichées, les données structurées et les textes politiques ne sont pas tous du même type. Les fiches du site identifient le périmètre, la date, l'auteur et ce que chaque source étaye.
 
 ## Comment lire les chiffres
 
@@ -59,6 +59,7 @@ Les scénarios sont des tests de sensibilité :
 - **Faible** : 1 % réel constant.
 - **Nul** : 0 % réel.
 - **Choc au début** : −20 %, puis −8 %, puis le taux choisi.
+- **Krach tardif** : baisse de 35 % trois ans avant la fin des versements, puis le taux choisi.
 - **Même rendement, ordre différent** : 10 années à +5 % et 10 à −1 %, puis le taux choisi; la seconde trajectoire inverse l'ordre. Si la période comparée est plus courte, les mêmes nombres de rendements sont conservés dans les deux ordres.
 
 Ce ne sont ni des probabilités ni des rendements prévus. Le modèle ne simule pas la volatilité, la diversification, l'inflation nominale, les impôts, les frais de transaction, la taille ou le risque du portefeuille, les recettes réellement collectées, la démographie des bénéficiaires, les règles d'indexation, ni une garantie de revenu permanent.
@@ -72,6 +73,20 @@ Le calcul des leviers commence à −2,4 point de PIB en 2070 sous la convention
 Le comparateur politique décrit des écrits ou déclarations explicitement cités : âge/durée, recettes, effort sur pensions élevées, capital collectif. Les statuts sont « au centre de la proposition », « mention explicite », « élément secondaire », « non identifié dans le texte cité » et « incertain ou divergent ». « Non identifié » ne signifie pas « opposé ». Les propos rapportés de personnes sont attribués individuellement et ne sont pas convertis en programme de parti. Les rendements budgétaires proposés par un mouvement ne sont pas repris comme vérifiés par le site.
 
 La proposition du site est normative : maintien d'un socle public par répartition, meilleure protection des petites pensions, effort à préciser pour les pensions élevées et constitution d'un actif collectif diversifié. La proposition ajoute quatre garde-fous à inscrire dans les règles futures : propriété collective non cessible à titre individuel, retraits encadrés par une mission publique, comptes audités et contrôle démocratique, et distinction entre une part bornée d’investissement productif en France et un portefeuille de retraite diversifié à l’international. Ces choix de gouvernance, leurs seuils, leurs garanties et leur forme juridique restent à arbitrer; ils ne sont pas présentés comme le droit en vigueur.
+
+## Atelier de financement annuel
+
+Les trois leviers affichés sont des estimations indicatives tirées de textes parlementaires et d'un rapport public historique. Le site ne les traite pas comme des recettes acquises : les fourchettes qui ne figurent pas directement dans la source sont des hypothèses, et les effets de comportement, d'assiette et de calendrier ne sont pas simulés. Les montants sélectionnés sont projetés constants pendant 40 ans uniquement pour comparer leur effet mécanique sur le capital.
+
+La loi de financement 2026 a déjà relevé à 10,6 % le taux de CSG applicable à plusieurs catégories de revenus du capital, avec des exceptions. Cette recette n'est pas proposée une seconde fois. La CSG générale et la flat tax peuvent viser des revenus qui se recoupent : l'interface les rend mutuellement exclusives, et l'état partagé dans l'URL refuse aussi toute combinaison qui les cumule. Les économies d'une mesure ponctuelle et celles déjà attendues du droit en vigueur ne figurent pas parmi les nouvelles recettes récurrentes.
+
+Les scénarios prédéfinis affichent 0, 1, 4 et 15,2 Md€ par an au chiffre central. Ils sont des illustrations arithmétiques, pas des recommandations ni des propositions validées.
+
+## Fiche de paie et intérêts composés
+
+La fiche de paie utilise les taux 2026 d'assurance vieillesse du régime général et de retraite complémentaire Agirc-Arrco. Elle applique le plafond annuel de la Sécurité sociale de 48 060 €, calcule les tranches 1 et 2 jusqu'à huit plafonds et ajoute la CET lorsque le salaire dépasse le plafond. L'exemple réunit les parts salariée et patronale pour un salarié non-cadre du privé; il exclut la CSG, l'impôt, les allègements et les situations particulières. Le pourcentage affiché ne vaut donc pas pour tous les salaires.
+
+Le calcul d'intérêts composés verse les sommes en fin d'année, en euros constants. Le montant annuel peut rester constant ou croître selon le taux choisi. Les rendements sont des hypothèses réelles, avant frais; les simulations ne prédisent pas le rendement d'un portefeuille.
 
 ## Sources principales
 

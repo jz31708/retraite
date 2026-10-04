@@ -22,7 +22,20 @@ export function decodeGameState(value, levers) {
   return { target, levels };
 }
 
+export function selectLeverLevel(levers, levels, selectedId, selectedLevel) {
+  const next = { ...levels, [selectedId]:selectedLevel };
+  const selected = levers.find((lever) => lever.id === selectedId);
+  if (selected?.overlapGroup && selectedLevel > 0) {
+    for (const lever of levers) {
+      if (lever.id !== selectedId && lever.overlapGroup === selected.overlapGroup) next[lever.id] = 0;
+    }
+  }
+  return next;
+}
+
 export function marketResult(amountBn, market, years = 40, returnPct = 3) {
-  const { primary } = buildReturnPaths(market, years, returnPct);
+  let primary;
+  if (market === "late-crash") { primary = Array(years).fill(returnPct / 100); primary[Math.max(0, years - 3)] = -0.35; }
+  else ({ primary } = buildReturnPaths(market, years, returnPct));
   return simulateFund({ annualReturns:primary, contributions:annualContributions(amountBn, years, years) }).finalCapitalBn;
 }
