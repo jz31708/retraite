@@ -1,9 +1,13 @@
-export function buildReturnPaths(name, totalYears, baseReturnPct) {
+export function buildReturnPaths(name, totalYears, baseReturnPct, contributionYears = totalYears) {
   if (!Number.isInteger(totalYears) || totalYears < 1) throw new RangeError("totalYears must be a positive integer");
   if (!Number.isFinite(baseReturnPct) || baseReturnPct <= -100) throw new RangeError("baseReturnPct must be greater than -100");
   const base = baseReturnPct / 100;
   const primary = Array(totalYears).fill(base);
 
+  if (name === "late-shock") {
+    primary[Math.max(0, Math.min(totalYears, contributionYears) - 3)] = -0.35;
+    return { primary, label:"Krach tardif · −35 % trois ans avant la fin des versements, puis le taux choisi" };
+  }
   if (name === "early-shock") {
     primary[0] = -0.2;
     if (totalYears > 1) primary[1] = -0.08;

@@ -104,3 +104,9 @@ test("model rejects invalid rates, balances, and inconsistent horizons", () => {
   assert.throws(() => calculateFunding({ targetBn:-1, allocations:{} }), RangeError);
   assert.throws(() => annualContributions(1, 3, 2), RangeError);
 });
+
+test("late shock hits the last years, not the first", () => {
+  const late = buildReturnPaths("late-shock", 40, 3);
+  assert.equal(late.primary[37], -0.35);
+  assert.equal(late.primary[0], 0.03);
+});

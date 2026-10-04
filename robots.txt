@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jz31708.github.io/retraite/sitemap.xml

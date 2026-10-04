@@ -28,9 +28,9 @@ Les tests vérifient les formules de financement et de retraits, les ordres de r
 2. Dépenses, recettes et conventions de comptabilité.
 3. Vignettes fictives pour montrer l'incidence possible d'un même taux.
 4. Proposition de préserver la répartition et de bâtir un fonds collectif, avec des garde-fous de propriété, de retrait et de contrôle à adopter.
-5. Registre explicite des ressources de transition.
-6. Simulateur cible/financé avec rendements, frais, retraits et séquence.
+5. Ateliers liés : leviers annuels, registre de transition et simulation des marchés.
+6. Fiche de paie simplifiée et intérêts composés avec paramètres modifiables.
 7. Leviers COR séparés du fonds et comparateur politique sourcé.
-8. Méthode, limites et fiches de sources.
+8. Méthode, limites et fiches de sources officielles.
 
 Le modèle, ses conventions et ses limites sont détaillés dans [MODEL.md](MODEL.md). La note [EDITORIAL-V4.md](EDITORIAL-V4.md) est conservée comme archive et ne décrit plus le site courant.

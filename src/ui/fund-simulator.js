@@ -20,6 +20,7 @@ const scenarios = new Map([
   ["low", { label:"Faible", rate:1 }],
   ["zero", { label:"Nul", rate:0 }],
   ["early-shock", { label:"Choc au début", rate:modelDefaults.realReturnPct }],
+  ["late-shock", { label:"Krach tardif", rate:modelDefaults.realReturnPct }],
   ["sequence", { label:"Ordre différent", rate:modelDefaults.realReturnPct }]
 ]);
 let selectedScenario = "reference";
@@ -169,7 +170,7 @@ function updateModel(fundingResult) {
   const withdrawalStartYear = Math.round(boundedInput("withdrawalStart", 1, 100, modelDefaults.withdrawalStartYear));
   const payoutYears = Math.round(boundedInput("payoutYears", 1, 40, modelDefaults.payoutYears));
   const totalYears = Math.max(years, withdrawalStartYear + payoutYears - 1);
-  const path = buildReturnPaths(selectedScenario, totalYears, baseReturnPct);
+  const path = buildReturnPaths(selectedScenario, totalYears, baseReturnPct, years);
   const primaryContributions = annualContributions(fundingResult.fundedBn, years, totalYears);
   const targetContributions = annualContributions(fundingResult.targetBn, years, totalYears);
   const target = simulateFund({ initialCapitalBn, annualReturns:path.primary, contributions:targetContributions, feeRate, withdrawalRate:withdrawalRatePct/100, withdrawalStartYear });
